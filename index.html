@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doclab-home</title>
+    <meta name="title" content="Doclab-home">
+    <meta name="description" content="This is a madical html template made by aryan">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./favicon (1).svg" type="image/svg+xml">
+
+    <!-- google font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Rubik:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+    <!-- custom css link -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!-- preload image -->
+
+    <link rel="preload" href="./assets/images/hero-banner.png">
+    <link rel="preload" href="./assets/images/hero-bg.png">
+
+</head>
+<body>
+
+    <!-- preloader -->
+    <div class="preloader" data-preloader>
+        <div class="circle"></div>
+    </div>
+
+    <!-- header -->
+
+    <header class="header" data-header>
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="./assets/images/logo.svg" width="136" height="46" alt="Doclab-home">
+            </a>
+            <nav class="navbar" data-navbar>
+                <div class="nav-top"
+                    <a href="#" class="logo">
+                        <img src="./assets/images/logo.svg" width="136" height="46" alt="Doclab-home">
+                    </a>
+                    <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+                        <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                </div>
+
+                <ul class="navbar-list">
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-link title-md">Home</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-link title-md">Doctors</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-link title-md">Services</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-link title-md">Blog</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-link title-md">Contact</a>
+                    </li>
+                </ul>
+
+                <ul class="social-list">
+                    <li>
+                        <a href="#" class="social-link">
+                            <ion-icon name="logo-twitter"></ion-icon>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="social-link">
+                            <ion-icon name="logo-facebook"></ion-icon>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="social-link">
+                            <ion-icon name="logo-pinterest"></ion-icon>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="social-link">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="social-link">
+                            <ion-icon name="logo-youtube"></ion-icon>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+                <ion-icon name="menu-outline"></ion-icon>
+            </button>
+
+            <a href="#" class="btn has-before title-md">Make Appointment</a>
+            <div class="overlay" data-nav-toggler data-overlay></div>
+
+        </div>
+    </header>
+    
+    <main>
+        <article>
+
+            <!-- HERO -->
+            <section class="section hero" style="background-image: url('./assets/images/hero-bg.png');" aria-label="home">
+                <div class="container">
+
+                    <div class="hero-content">
+
+                        <p class="hero-subtitle has-before" data-reveal="left">
+                            Welcome To Doclab
+                        </p>
+                        <h1 class="headline-lg hero-title" data-reveal="left">
+                            Find Nearest Doctor.
+                        </h1>
+
+                            <div class="hero-card" data-reveal="left">
+
+                                <p class="title-lg card-text">
+                                    Search doctors. clinics. hospitals. etc.
+                                </p>
+                                
+                                <div class="wrapper">
+
+                                    <div class="input-wrapper title-lg">
+
+                                        <input type="text" name="location" placeholder="Locations" class="input-field">
+                                        <ion-icon name="location"></ion-icon>
+
+                                    </div>
+
+                                    <button class="btn has-before">
+                                        <ion-icon name="search"></ion-icon>
+
+                                        <span class="span title-md">Find Now</span>
+                                    </button>
+                                </div>
+
+                            </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </article>
+
+    </main>
+
+
+
+    
+    
+    
+
+
+    <!-- custom js link -->
+    <script src="./assets/js/script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

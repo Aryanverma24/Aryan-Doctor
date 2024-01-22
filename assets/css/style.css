@@ -165,7 +165,12 @@ body.nav-active{
     overflow: hidden;
 }
 
+
+
+
 /* reused css */
+
+
 
 .container{
     padding-inline: 16px;
@@ -205,8 +210,45 @@ body.nav-active{
     display: flex;
 }
 
+.section{
+    padding-block: var(--section-padding);
+}
+.has-before,
+.has-after{
+    position: relative;
+    z-index: 1;
+}
 
+.has-before::before,
+.has-after::after{
+    content: "";
+    position: absolute;
+}
 
+.btn{
+    background-color: var(--verdigris);
+    color: var(--white);
+    font-weight: var(--fw-700);
+    padding: 12px 36px;
+    display:flex;
+    align-items: center;
+    gap:8px;
+    border-radius: var(--radius-6);
+    overflow: hidden;
+}
+
+.btn::before{
+    top: 0;
+    left: -100%;
+    width:100%;
+    height: 100%;
+    background-color: var(--eerie-black);
+    border-radius: var(--radius-6);
+    transition: var(--transition-2);
+    z-index: -1;
+}
+
+.btn:is(:hover, :focus-visible)::before{transform: translateX(100%);}
 
 
 
@@ -348,4 +390,63 @@ body.nav-active{
 .overlay.active{
     transform: translateX(-100%);
     visibility: visible;
+}
+
+
+/* hero-banner */
+
+.hero-banner{
+    display: none;
+}
+.hero{
+    background-color: var(--midnight-green);
+    --section-padding: 200px;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+.hero-subtitle{
+    color: var(--white);
+    font-weight: var(--fw-500);
+    padding-inline-start: 80px;
+}
+.hero-subtitle::before{
+    top: 50%;
+    left:0;
+    width: 60px;
+    height: 1px;
+    background-color: var(--white);
+}
+
+.hero-title{margin-block:20px 30px;}
+
+.hero-card{
+    background-color: var(--white);
+    border-radius: var(--radius-12);
+    padding: 20px;
+}
+
+.hero-card .card-text{
+    color: var(--eerie-black);
+    border-block-end: 1px solid var(--midnight-green_a25);
+    padding-block-end: 12px;
+    margin-block-end: 14px;
+}
+
+.hero-card .input-wrapper{
+    position: relative;
+}
+
+.hero-card .input-field{
+    color: var(--eerie-black);
+    border-block-end: 1px solid var(--gainsboro);
+    padding-inline-end: 18px;
+}
+
+.hero-card .input-wrapper ion-icon{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateX(-50%);
+    color: var(--verdigris);
 }

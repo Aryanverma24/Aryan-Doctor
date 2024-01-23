@@ -450,3 +450,8 @@ body.nav-active{
     transform: translateX(-50%);
     color: var(--verdigris);
 }
+.hero-card  .btn{
+    width: 100%;
+    justify-content: center;
+    margin-block-start: 16px;
+}

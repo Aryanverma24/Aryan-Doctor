@@ -259,6 +259,10 @@ body.nav-active{
     gap: 40px 28px;
 }
 
+.text-center{
+    text-align: center;
+}
+
 
 
 
@@ -592,4 +596,220 @@ body.nav-active{
 
 .listing-card .card-text{
     color: var(--midnight-green);
+}
+
+/* blog
+ */
+
+.blog{
+    background-image: linear-gradient(to bottom, var(--alice-blue) 60% , var(--white) 60%);
+    padding-block-start: 0;
+}
+
+.blog .section-title{
+    scroll-margin-block-end: 60PX;
+}
+
+.blog-card{
+    padding: 50px 36px;
+    border-radius: var(--radius-12);
+    border: 2px solid var(--alice-blue);
+    background-image: url('../images/blog-card.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.blog-card::before,
+.blog-card::after{
+    inset: 0;
+    z-index: -1;
+    transition: var(--transition-3);
+}
+
+.blog-card::before{
+    background-color: var(--midnight-green);
+    opacity: 0.9;
+}
+
+.blog-card::after{
+    background-color: var(--white);
+}
+
+.blog-card:is(:hover, :focus-within)::after{transform: translateY(100%);}
+
+.blog-card:is(:hover, :focus-within){
+    color: var(--white);
+}
+
+.meta-wrapper{
+    display: flex;
+    gap: 2rem;
+}
+
+.meta-card{
+    display: flex;
+    gap: 4rem;
+}
+.meta-wrapper ion-icon{
+    font-size: 2.2rem;
+}
+
+.meta-card .span{
+    color: var(--midnight-green);
+}
+.blog-card:is(:hover, :focus-within) :is(.meta-wrapper,.card-title,.date,.card-text, .span){
+    color: var(--white);
+}
+.blog-card .date{
+    color: var(--space-cadet);
+    font-weight: var(--fw-700);
+    text-transform: uppercase;
+    opacity: 0.5;
+    margin-block: 16px;
+}
+
+.blog-card .btn-text{
+    color: var(--verdigris);
+    margin-block-start: 12px
+}
+
+
+/* Footer */
+
+.footer{
+    background-color: var(--midnight-green);
+    color: var(--white);
+    background-size: contain;
+    background-position: top right;
+    background-repeat: no-repeat;
+}
+
+.footer-top{
+    display: grid;
+    gap: 40px;
+    padding-block-end: 60px;
+}
+
+.footer-brand{
+    background-color: var(--ming);
+    padding: 32px;
+    border-radius: var(--radius-6);
+}
+
+.footer .logo{
+    margin-block-end: 20px;
+}
+
+.contact-item{
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-block-start: 12px;
+}
+
+.contact-item .item-icon{
+    font-size: 4rem;
+}
+
+.contact-link{
+    display: inline;
+    transition: var(--transition-1);
+}
+
+.contact-link:is(:hover, :focus-visible){
+    color: var(--verdigris);
+}
+
+.footer-list-title{
+    color: var(--white);
+    font-weight: var(--fw-700);
+    margin-block-end: 20px;
+}
+
+.footer .text{
+
+    opacity: 0.7;
+}
+
+.footer .address{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-block-start: 12px;
+}
+
+.footer .address ion-icon{
+    font-size: 4rem;
+    flex-shrink: 0;
+}
+
+.footer-link{
+    margin-block-start:0px;
+    transition: var(--transition-1);
+}
+
+.footer-link:is(:hover, :focus-visible){ color: var(--verdigris);}
+
+.footer-form .input-field{
+    color: var(--white);
+    border: 1px solid var(--white_a20);
+    border-radius: 4px;
+    padding: 8px 20px;
+}
+
+.footer-form .input-field::placeholder{color: inherit;}
+
+.footer-form .btn{
+    width: 100%;
+    justify-content: center;
+    margin-block: 12px 28px;
+}
+
+.footer-bottom{
+    padding-block: 32px;
+    border-block-start: 1px solid var(--white_a20)
+}
+
+.footer-bottom .social-list{
+    justify-content: flex-start;
+    gap: 8px;
+    margin-block-start: 16px;
+}
+
+.footer-bottom .social-link{
+    font-size: 1.4rem;
+    padding: 12px;
+    background-color: var(--white_a10);
+    border-radius: var(--radius-circle);
+    transition: var(--transition-1);
+}
+
+
+.footer-bottom .social-link:is(:hover, :focus-visible){
+    background-color: var(--verdigris);
+}
+
+.back-to-top{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--verdigris);
+    color: var(--white);
+    padding: 16px;
+    font-size: 2rem;
+    border-radius: var(--radius-circle);
+    transition: var(--transition-1);
+    opacity: 0;
+    z-index: 3;
+}
+
+.back-to-top:is(:hover, :focus-visible){
+    background-color: var(--eerie-black);
+}
+
+.back-to-top.active{
+    transform: translateY(-10px);
+    opacity: 1;
 }

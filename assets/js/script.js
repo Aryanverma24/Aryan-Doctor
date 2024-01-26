@@ -12,7 +12,7 @@ const addEventOnElements = function (elements, eventType, callback) {
   }
 }
 
-
+// const crossbtn= document.getElementsByClassName("nav-close-btn");
 
 /**
  * PRELOADER
@@ -39,16 +39,36 @@ window.addEventListener("load", function () {
 const navbar = document.querySelector("[data-navbar]");
 const navTogglers = document.querySelectorAll("[data-nav-toggler]");
 const overlay = document.querySelector("[data-overlay]");
+// const navClose = document.getElementsByClassName("nav-close-btn");
 
-const toggleNav = function () {
+// navClose.addEventListener("click",function(){
+//   navbar.classList.remove("active");
+//   overlay.classList.remove("active");
+//   document.body.classList.remove("nav-active");
+
+// })
+// function closebutton(){
+//   console.log("Working....")
+//   navbar.classList.remove("active");
+//     overlay.classList.remove("active");
+//     document.body.classList.remove("nav-active");
+// }
+
+// const toggleNav = function () {
+//   navbar.classList.toggle("active");
+//   overlay.classList.toggle("active");
+//   document.body.classList.toggle("nav-active");
+// }
+
+// addEventOnElements(navTogglers, "click", toggleNav);
+
+
+function crossbtn(){
+  // console.log(navbar + "  "+ navTogglers + " " + overlay)
   navbar.classList.toggle("active");
   overlay.classList.toggle("active");
   document.body.classList.toggle("nav-active");
 }
-
-addEventOnElements(navTogglers, "click", toggleNav);
-
-
 
 /**
  * HEADER & BACK TOP BTN
@@ -71,3 +91,21 @@ const activeElementOnScroll = function () {
 }
 
 window.addEventListener("scroll", activeElementOnScroll);
+
+
+// scroll reveal
+
+const revealElements = document.querySelectorAll("[data-reveal]");
+const revealElementOnScroll = function(){
+for(let i=0,len=revealElements.length;i<len;i++){
+  if(revealElements[i].getBoundingClientRect().top < window.innerHeight / 1.15){
+    revealElements[i].classList.add("revealed");
+  }
+  else{
+    revealElements[i].classList.remove("revealed");
+  }
+}
+}
+
+window.addEventListener("scroll", revealElementOnScroll);
+window.addEventListener("load", revealElementOnScroll);

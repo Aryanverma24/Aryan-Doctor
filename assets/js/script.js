@@ -12,7 +12,6 @@ const addEventOnElements = function (elements, eventType, callback) {
   }
 }
 
-// const crossbtn= document.getElementsByClassName("nav-close-btn");
 
 /**
  * PRELOADER
@@ -39,28 +38,6 @@ window.addEventListener("load", function () {
 const navbar = document.querySelector("[data-navbar]");
 const navTogglers = document.querySelectorAll("[data-nav-toggler]");
 const overlay = document.querySelector("[data-overlay]");
-// const navClose = document.getElementsByClassName("nav-close-btn");
-
-// navClose.addEventListener("click",function(){
-//   navbar.classList.remove("active");
-//   overlay.classList.remove("active");
-//   document.body.classList.remove("nav-active");
-
-// })
-// function closebutton(){
-//   console.log("Working....")
-//   navbar.classList.remove("active");
-//     overlay.classList.remove("active");
-//     document.body.classList.remove("nav-active");
-// }
-
-// const toggleNav = function () {
-//   navbar.classList.toggle("active");
-//   overlay.classList.toggle("active");
-//   document.body.classList.toggle("nav-active");
-// }
-
-// addEventOnElements(navTogglers, "click", toggleNav);
 
 
 function crossbtn(){
